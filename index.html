@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Patient Education Weird</title>
+	<link href="favicon.ico" rel="shortcut icon" />
+	<script type="text/javascript" src="js/jquery/jquery-2.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/android/video.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/carousel.css">
+	<link rel="stylesheet" type="text/css" href="css/clock.css">
+	<script type="text/javascript">
+		function playVideo(vidUrl)
+        {
+            window.plugins.videoPlayer.play(vidUrl);
+        }
+	</script>
+	<script type='text/javascript' src="js/modExtras.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="pe">
+
+	<div class="pageTitlePatientEd" style="width: 60%; margin-top: 3px;">
+		<span class="transparent" style="margin: 0; padding: 27px; border-radius: 8px;"><img src="images/logo/mc-logo.png" height="50" style="margin: 10px 15px 12px 0;" />
+		Patient Education: Pregnancy - Birth</span>
+	</div>
+
+	<div style="float:left; width: 40%;">
+		<div class="patientInfo transparent">
+			<div style="float: left;"><span class="patientName">Hello Jane E. Smith</span><br />Phone: (507) 289-1234<br />Room: Eisenberg 3-123</div>
+			<div class="clock2 clockInfo" style="float: left; margin-left: 10px; border-left: 1px solid #666; padding-left: 10px;">
+				<span id="hours" class="large"> </span>
+				<span id="point" class="large">:</span>
+				<span id="min" class="large"> </span>
+				<span id="ampm" class="large"> </span>
+				<div id="Date" class="large"></div>
+			</div>
+		</div>
+	</div>
+
+	<div style="clear:both;"></div><br />
+
+	<div class="content transparent">
+		<div class="categoryTitle">Labor and Birth</div>
+		<div id="myCarouselLabor" class="carousel slide"><img src="images/misc/ajax-loader.gif" alt="ajax" /> Loading Content...</div>
+	</div>
+	
+	
+	
+	<!-- <a href="test1.html">test1</a>, <a href="test2.html">test2</a>, <a href="test3.html">test3</a>, <a href="test4.html">test4</a>, <a href="test5.html">test5</a><br /> -->
+	<!-- <a href="javascript:void(0)" onclick="playVideo('http://roqiww002a.mayo.edu:1935/vod/_definst_/library/content/r71v1/entry/data/351/155/1_9tqbyar8_1_r52bfyb4_1.mp4/playlist.m3u8');">hb1</a>
+	<a href="javascript:void(0)" onclick="playVideo('http://roqiww002a.mayo.edu:1935/vod/_definst_/library/content/r71v1/entry/data/351/157/1_4nixhpge_1_4cs4cmkm_1.mp4/playlist.m3u8');">hb2</a>
+	<a href="javascript:void(0)" onclick="playVideo('http://roqiww002a.mayo.edu:1935/vod/_definst_/library/content/r71v1/entry/data/351/158/1_hqwe3fbe_1_8gmadisk_1.mp4/playlist.m3u8');">hb3</a>
+	<a href="javascript:void(0)" onclick="playVideo('http://roqiww002a.mayo.edu:1935/vod/_definst_/library/content/r71v1/entry/data/351/157/1_zejh8fhd_1_nlp52bos_1.mp4/playlist.m3u8');">hb4</a>
+	<a href="javascript:void(0)" onclick="playVideo('http://roqiww002a.mayo.edu:1935/vod/_definst_/library/content/r71v1/entry/data/351/158/1_nrmpcims_1_2a3auv54_1.mp4/playlist.m3u8');">hb5</a>
+	<a href="javascript:void(0)" onclick="playVideo('http://roqiww002a.mayo.edu:1935/vod/_definst_/library/content/r71v1/entry/data/350/765/1_krpahhxj_1_2u7dh6dl_1.mp4/playlist.m3u8');">hb6</a><br>
+	-->
+	<!--
+	<video id="video" autobuffer height="480" width="500"  controls onclick="this.play()">
+		<source src="http://roqiww002a.mayo.edu:1935/vod/_definst_/library/content/r71v1/entry/data/351/155/1_9tqbyar8_1_r52bfyb4_1.mp4/playlist.m3u8"></source>
+	</video>
+	-->
+</body>
+</html>
+
+<script type="text/javascript">
+	if (isMobileDevice()) {
+		$('#myCarouselLabor').html("<img src=\"images/misc/ajax-loader.gif\" alt=\"ajax\" /> Loading Patient Education, please wait.").load('includes/pe/birthMobile.html');
+	} else	{
+		$('#myCarouselLabor').html("<img src=\"images/misc/ajax-loader.gif\" alt=\"ajax\" /> Loading Patient Education, please wait.").load('includes/pe/birthDesktop.html');
+	}
+	getDateTime();
+	if (navigator.userAgent.search("MSIE") != -1 ) {alert('This Application is not designed to run on Microsoft Internet Explorer.');}
+</script>

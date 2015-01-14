@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Kaltura Mayo Test</title>
+<script type="text/javascript" src="http://www.kaltura.com/p/1601341/sp/160134100/embedIframeJs/uiconf_id/25122551/partner_id/1601341"></script>
+</head>
+<body>
+<div id='kplayer' style="width:400px;height:330px;">
+</div>
+<script>
+	// alert(navigator.userAgent);
+    function loadKWidget()
+    {
+        kWidget.embed({
+            'targetId': 'kplayer',
+            'wid': '_1601341',
+            'uiconf_id' : '25122551',
+            'entry_id' : '1_9tqbyar8',
+            'flashvars': // flashvars allows you to set runtime uiVar configuration overrides.
+            {"ks":"djJ8MTYwMTM0MXyl2mED5OUfOVOxssBaD84s1-4EoTV6seKBABbAGXAjvdGyzhaIvIXPMpXZpjMyJ-7MqTboCNsP_WY8XinmNH6tWv-pV0XCDfdRoaW-XtgsQaCnCyM5pTR7modxhWNq_DKyYKAEw9AA_0Y1yYAnIDhfmdO3iJHpwYbdGiZ9opfJCYkxdGHk91pDFziEaMdrg7jtexIBMX1-Yn9tR5qudIJd","applicationName":"intranet01","playbackContext":"","disableAlerts":"false","externalInterfaceDisabled":"false","autoPlay":"true","streamerType":"hls"}            ,
+            'params': {
+                'wmode': 'transparent'
+            }
+        });
+    }
+    loadKWidget();
+</script>
+</body>
+</html>
